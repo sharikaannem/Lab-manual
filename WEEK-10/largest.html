@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-image:url(Vaaleanpunainen\ Kimaltelevaa\ -\ Ilmainen\ kuva\ Pixabayssa.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                height:100%;
+                margin:0;
+            }
+            input {
+                padding: 8px;
+                width: 250px;
+                margin-top: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            div{
+                justify-content:center;
+                text-align:center;
+            }
+            h1{
+                text-align:center;
+                color:darkviolet;
+            }
+            button{
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Largest of Five Numbers</h1>
+       <div>
+           <input type="number" id="n1" placeholder="Enter the first number:"><br>
+           <input type="number" id="n2" placeholder="Enter the Second number:"><br>
+           <input type="number" id="n3" placeholder="Enter the third number:"><br>
+           <input type="number" id="n4" placeholder="Enter the fourth number:"><br>
+           <input type="number" id="n5" placeholder="Enter the fifth number:"><br>
+           <button onclick="largest()">Largest Number</button>
+       </div>
+        <script>
+            function largest(){
+                let a= parseInt(document.getElementById("n1").value);
+                let b= parseInt(document.getElementById("n2").value);
+                let c= parseInt(document.getElementById("n3").value);
+                let d= parseInt(document.getElementById("n4").value);
+                let e= parseInt(document.getElementById("n5").value);
+                let largest;
+                if(a>=b && a>=c && a>=d && a>=e){
+                    largest=a;
+                }
+                else if(b>=a && b>=c && b>=d && b>=e){
+                    largest=b;
+                }
+                else if(c>=a && c>=b && c>=d && c>=e){
+                    largest=c;
+                }
+                else if(d>=a && d>=b && d>=c && d>=e){
+                    largest=d;
+                }
+                else{
+                    largest=e;
+                }
+                window.alert("The largest of five numbers is : "+ largest);
+            }
+        </script>
+    </body>
+</html>
